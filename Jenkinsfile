@@ -4,7 +4,8 @@ pipeline {
     stage('build') {
       steps {
         withGradle() {
-          sh '''./gradlew -version
+          sh '''sudo chmod +x gradlew
+./gradlew -version
 ./gradlew clean
 ./gradlew build'''
         }
